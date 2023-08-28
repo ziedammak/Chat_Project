@@ -1,4 +1,4 @@
-from chat_library import Chat
+from chat import Chat
 
 api_key = "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"
 system_prompt = "You are a helpful assistant.\n"
