@@ -1,7 +1,7 @@
 
-# My Chat Library
+# Chat Library
 
-My Chat Library is a Python library that provides a simple wrapper for utilizing the OpenAI API to create a chatbot.
+Chat Library is a Python library that provides a simple wrapper for utilizing the OpenAI API to create a chatbot.
 
 ## Installation
 
