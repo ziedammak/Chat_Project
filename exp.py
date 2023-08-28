@@ -1,6 +1,6 @@
 from chat import Chat
 
-api_key = "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"
+api_key = "insert_Key"
 system_prompt = "You are a helpful assistant.\n"
 chatbot = Chat(api_key, system_prompt)
 
