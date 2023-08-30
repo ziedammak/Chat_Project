@@ -12,6 +12,7 @@ Chat Library is a Python library that provides a simple wrapper for utilizing th
    pip install openai
    
 3. install the library by accessing chat library folder and executing :
+
 ```bash
    pip install
 
