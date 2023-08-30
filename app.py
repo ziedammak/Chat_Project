@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from chat_library.chat_with_ai.chat_with_ai  import Chat
 app = Flask(__name__,template_folder='web_interface/templates')
 
-api_key = "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"
+api_key = "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"
 system_prompt = "You are a helpful assistant.\n"
 chatbot = Chat(api_key, system_prompt)
 
