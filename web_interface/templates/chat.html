@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Web Interface</title>
+</head>
+<body>
+    <h1>Chatbot Web Interface</h1>
+    <div id="chat-container">
+        <div id="chat-history">
+            {% for message in chat_history %}
+                <p class="{{ message.role }}">{{ message.content }}</p>
+            {% endfor %}
+        </div>
+        <form id="user-input-form" method="post">
+            <input type="text" name="user_input" id="user-input" placeholder="Type your message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script>
+        const chatHistory = document.getElementById('chat-history');
+        const userInputForm = document.getElementById('user-input-form');
+        const userInput = document.getElementById('user-input');
+
+        userInputForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const userMessage = userInput.value;
+            chatHistory.innerHTML += `<p class="user">${userMessage}</p>`;
+            userInput.value = '';
+
+            const response = await fetch('/get_response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ user_input: userMessage })
+            });
+
+            const responseData = await response.json();
+            const aiResponse = responseData.ai_response;
+            chatHistory.innerHTML += `<p class="ai">${aiResponse}</p>`;
+        });
+    </script>
+</body>
+</html>
