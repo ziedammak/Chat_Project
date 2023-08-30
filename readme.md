@@ -5,7 +5,7 @@ Chat Library is a Python library that provides a simple wrapper for utilizing th
 
 ## Installation
 
-1. Get your OpenAI API key from the [OpenAI website](https://beta.openai.com/signup/).
+1. Get your OpenAI API key from the [OpenAI website](https://beta.openai.com/signup/). Update the key in app.py
 2. Install the required packages using pip:
 
    ```bash
@@ -14,7 +14,7 @@ Chat Library is a Python library that provides a simple wrapper for utilizing th
 3. install the library by accessing chat library folder and executing :
 
 ```bash
-   pip install
+   pip install . 
 ```
 4.
 
